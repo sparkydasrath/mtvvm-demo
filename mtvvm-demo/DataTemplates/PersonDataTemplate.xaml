@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:mtvvm_demo.ViewModels">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/TextBlockStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <DataTemplate x:Key="PersonDataTemplate" DataType="{x:Type vm:PersonViewModel}">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       Text="NAME" />
+            <TextBlock Grid.Row="1"
+                       Style="{StaticResource ContentTextBlockStyle}"
+                       Text="{Binding Name}" />
+
+            <TextBlock Grid.Row="2"
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       Text="AGE" />
+            <TextBlock Grid.Row="3"
+                       Style="{StaticResource ContentTextBlockStyle}"
+                       Text="{Binding Age}" />
+
+            <TextBlock Grid.Row="4"
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       Text="STREET" />
+            <TextBlock Grid.Row="5"
+                       Style="{StaticResource ContentTextBlockStyle}"
+                       Text="{Binding Street}" />
+
+            <TextBlock Grid.Row="6"
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       Text="ZIP" />
+            <TextBlock Grid.Row="7"
+                       Style="{StaticResource ContentTextBlockStyle}"
+                       Text="{Binding ZipCode}" />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>
